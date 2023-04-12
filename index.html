@@ -1,37 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <title>Calculadora de Resistência Elétrica</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./imagens/eletrica.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
-  <h1>Calculadora de Resistência Elétrica</h1>
+  <section class="banner">
+    <div>
+      <div>
+        <h2>Calculadora da resistência elétrica</h2>
+      </div>
+      <div>
+        <h3>
+          "Resistência elétrica (medida no SI: ohms) é a capacidade física de um corpo qualquer se opor à passagem de corrente elétrica mesmo quando existe uma diferença de potencial aplicada, capacidade calculada pela Primeira Lei de Ohm, e, segundo o Sistema Internacional de Unidades (SI), é medida em ohms."
+          <a href="https://pt.wikipedia.org/wiki/Resist%C3%AAncia_el%C3%A9trica">Ver mais...</a>
+        </h3>
+      </div>
+      <div>
+        <a href="#containerCalc" class="btnCalc">Usar Calculadora</a>
+      </div>
+    </div>
+    <img src="./imagens/resistencia-eletrica-5.webp" alt="imagem">
+  </section>
 
-  <div id="container">
+  <div id="containerCalc">
 
     <label for="voltage">Tensão (V):</label>
     <input type="number" id="voltage" required>
 
-
-
     <label for="current">Corrente (A):</label>
     <input type="number" id="current" required>
 
-
-
     <button onclick="calculateResistance()" class="btn">Calcular Resistência</button>
-
-
 
     <label for="resistance">Resistência (Ω):</label>
     <input type="text" id="resistance" readonly>
 
+    <button class="btnReloadPage">
+      Refazer <ion-icon name="reload-outline"></ion-icon>
+    </button>
+
   </div>
 
+  <div class="container">
+    <h2>Como funciona o cálculo ?</h2>
+
+    <div class="main-container">
+      <p>
+        A resistência elétrica (R) pode ser definida pela seguinte equação:
+      </p>
+      <br>
+      <img src="./imagens/imagen-Calculo.webp" alt="imagen">
+      <br>
+      <p>
+        A resistência elétrica é uma medida da oposição que um material oferece à passagem da corrente elétrica através dele. Ela é medida em ohms (Ω) e é calculada usando a Lei de Ohm, que estabelece a relação entre a tensão (V), a corrente elétrica (I) e a resistência elétrica (R): <br><br>
+        R = V / I <br><br>
+        Ou seja, a resistência elétrica é igual à tensão aplicada sobre o material dividida pela corrente elétrica que passa através dele. A unidade de medida de resistência, o ohm, é definida como a resistência elétrica de um material que permite a passagem de uma corrente elétrica de 1 ampere (A) quando uma tensão de 1 volt (V) é aplicada sobre ele.
+        Alguns fatores que afetam a resistência elétrica de um material incluem sua geometria, comprimento, área transversal e temperatura. Materiais mais longos e finos têm maior resistência elétrica do que materiais mais curtos e grossos. Além disso, a resistência elétrica de um material aumenta com a temperatura, pois a agitação térmica dos átomos e elétrons em um material aumenta, o que dificulta o fluxo de elétrons através dele.
+      </p>
+    </div>
+
+  </div>
+
+  <section class="rodaPe">
+    <div class="infRodaPe">
+      <div class="infPessoal">
+        <h3> Desenvolvedor: </h3>
+        <p>Bruno Mota</p>
+
+      </div>
+      <div class="contato">
+        <h3> Contato: </h3>
+        <a href="https://www.instagram.com/_bmota7/"> Instagram <ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://github.com/bMota7"> GitHub <ion-icon name="logo-github"></ion-icon></a>
+        <a href="#"> Email <ion-icon name="mail-outline"></ion-icon></a>
+      </div>
+      <div class="referencias">
+        <h3> Referências: </h3>
+        <a href="https://pt.wikipedia.org/wiki/Resist%C3%AAncia_el%C3%A9trica">Wikipedia</a>
+        <a href="https://brasilescola.uol.com.br/fisica/calculo-resistencia-eletrica.htm">Brasil Escola</a>
+      </div>
+    </div>
+
+    <div class="direitosReservados">
+      <p> © 2023 Todos os direitos reservados</p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

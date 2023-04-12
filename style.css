@@ -2,23 +2,107 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-
     background-color: #101728;
+
+    margin: 0;
   }
+
+  /* Banner */
+
+  section { padding: 30px 15%; }
   
-  body h1 {
-    text-align: center;
-
-    color: #fff;
+  .banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 100px;
+    min-height: 40vw;
+    margin-bottom: 40px;
   }
 
-  #container {
-    margin-top: 20px;
+  .banner h2 {
+    /* white-space: nowrap; */
+    margin: 0 0 4px;
+    font-size: 40px;
+    color: rgb(255 255 255 / 96%);
+  }
+
+  .banner h3 {
+    font-weight: 400;
+    margin: 0;
+    color: rgb(255 255 255 / 57%);
+    margin-bottom: 30px;
+  }
+
+  .banner h3 a {
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e1960a;
+  }
+
+  .banner h3 a:visited {
+    color: #e1960a;
+  }
+
+  @keyframes morph {
+    0%,
+    100% {
+      border-radius: 
+      40% 60% 70% 30% /
+      40% 40% 60% 50%;
+    }
+    34% {
+      border-radius: 
+      70% 30% 50% 50% / 
+      30% 30% 70% 70%;
+    }
+    67% {
+      border-radius: 
+      100% 60% 60% 100% / 
+      100% 100% 60% 60%;
+    }
+  }
+
+  .banner img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    animation: 
+    morph 3.5s linear infinite;
+    box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.25), 
+    0 4px 8px rgba(0, 0, 0, 0.25), 
+    0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .banner .btnCalc {
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    width: 250px;
+    height: 30px;
+    padding: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #e1960a;
+    box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.25), 
+    0 4px 8px rgba(0, 0, 0, 0.25), 
+    0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Container Calculadora */
+
+  #containerCalc {
     margin-left: 70px;
     margin-right: 70px;
-
+    margin-bottom: 160px;
     border-radius: 10px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,83 +110,278 @@ body {
     text-align: center;
     gap: 15px;
     padding: 40px;
-
     font-size: 1.2rem;
-
-    width: auto;
     height: auto;
-
     color: #fff;
-
-    background-color: #5a5a5a;
+    background-color: #05032a;
   }
   
   label {
     display: inline-block;
     width: 200px;
-
     font-size: 1.2rem;
     font-weight: 600;
   }
   
   input[type="number"] {
-    width: 200px;
+    width: 200px; 
     height: 25px;
-
     border: none;
     border-radius: 5px;
-
     padding: 5px;
-
     font-size: 1.2rem;
     font-weight: 500;
-
     outline: none;
-
     margin-bottom: 10px;
-
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   }
   
   input[type="text"] {
     width: 200px;
     height: 25px;
-
     padding: 5px;
-
     font-size: 1.2rem;
     font-weight: 500;
-
     outline: none;
-
     border: none;
     border-radius: 5px;
-
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   }
   
-  #container .btn {
+  #containerCalc .btn {
     width: 190px;
     height: 30px;
-
     padding: 5px;
-
     border: none;
-    border-radius: 10px;
-
+    border-radius: 6px;
     outline: none;
-
     font-size: 16px;
     font-weight: 600;
-
     background-color: #e1960a;
-
     color: #fff;
-
     cursor: pointer;
-
     box-shadow: 
    0 2px 4px rgba(0, 0, 0, 0.25), 
    0 4px 8px rgba(0, 0, 0, 0.25), 
    0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+#containerCalc button:last-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  height: 35px;
+  padding: 6px;
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: #101728;
+  box-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.25), 
+  0 4px 8px rgba(0, 0, 0, 0.25), 
+  0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+#containerCalc button:last-child ion-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Container Inf */
+div .container {
+  width: 100%;
+  max-width: 980px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  padding: 50px;
+}
+
+.container h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.container .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 980px;
+}
+
+.container .main-container p {
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.container .main-container img {
+  width: 120px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 
+  0 2px 4px rgba(0, 0, 0, 0.25), 
+  0 4px 8px rgba(0, 0, 0, 0.25), 
+  0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Roda pé */
+section .rodaPe {
+  width: 100%;
+  max-width: 980px;
+}
+
+.rodaPe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background: #05032a;
+  padding: 40px;
+}
+
+.rodaPe h3 {
+  font-size: 15px;
+  color: #fff;
+}
+
+.rodaPe .infRodaPe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  margin-bottom: 50px;
+}
+
+.rodaPe .infRodaPe .infPessoal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: rgb(255 255 255 / 57%);
+  
+}
+
+.rodaPe .infRodaPe .contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rodaPe .infRodaPe .contato a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-decoration: none;
+  color: rgb(255 255 255 / 57%);
+}
+
+.rodaPe .infRodaPe .contato a:hover {
+  color: #e1960a;
+}
+
+.rodaPe .infRodaPe .contato a:visited {
+  color: #e1960a;
+}
+
+.rodaPe .infRodaPe .referencias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.rodaPe .infRodaPe .referencias a {
+  text-decoration: none;
+  color: rgb(255 255 255 / 57%);
+}
+
+.rodaPe .infRodaPe .referencias a:visited {
+  color: #e1960a;
+  text-decoration: none;
+}
+
+.rodaPe .direitosReservados {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255 255 255 / 57%);
+}
+
+/* Responsividade */
+
+@media (width <= 768px) {
+
+  section .banner { padding: 30px 10%; }
+  .banner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .rodaPe .infRodaPe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+    text-align: center;
+  }
+}
+@media (width <= 500px) {
+  label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+  }
+
+  #containerCalc .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#containerCalc button:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }
